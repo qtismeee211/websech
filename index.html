@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Acc Game - qd88store.id.vn</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="#">qd88store</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#hero">Trang Chủ</a></li>
+                    <li><a href="#products">Sản Phẩm</a></li>
+                    <li><a href="#about">Về Chúng Tôi</a></li>
+                    <li><a href="#contact">Liên Hệ</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                <a href="#" class="cart-icon" id="cart-icon"><i class="fas fa-shopping-cart"></i> Giỏ Hàng (<span id="cart-count">0</span>)</a>
+                <a href="#" class="login-btn"><i class="fas fa-user"></i> Đăng Nhập</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="container">
+            <h1>Săn Acc Game Giá Rẻ - Chất Lượng Đỉnh Cao</h1>
+            <p>Nơi cung cấp đa dạng các loại tài khoản game hot nhất thị trường!</p>
+            <a href="#products" class="btn-primary">Xem Ngay</a>
+        </div>
+    </section>
+
+    <section id="products" class="product-grid">
+        <div class="container"> <h2>Sản Phẩm Nổi Bật</h2>
+            <div class="filters">
+                <select id="game-filter">
+                    <option value="all">Tất cả Game</option>
+                    <option value="LienMinh">Liên Minh Huyền Thoại</option>
+                    <option value="TocChien">Tốc Chiến</option>
+                    <option value="GenshinImpact">Genshin Impact</option>
+                    <option value="Valorant">Valorant</option>
+                </select>
+                <input type="text" id="search-bar" placeholder="Tìm kiếm acc game...">
+                <button class="btn-primary" id="apply-filters">Áp dụng</button>
+            </div>
+            <div class="products-list" id="products-list">
+                <div class="product-card" data-game="LienMinh" data-price="1500000">
+                    <img src="https://via.placeholder.com/300x200?text=Acc+LMHT" alt="Acc Liên Minh Huyền Thoại">
+                    <h3>Acc LMHT Rank Kim Cương</h3>
+                    <p class="game-name">Liên Minh Huyền Thoại</p>
+                    <div class="price">1.500.000 VNĐ</div>
+                    <button class="btn-add-to-cart" data-id="lmht001" data-name="Acc LMHT Rank Kim Cương" data-price="1500000">Thêm vào giỏ</button>
+                    <a href="product-detail.html?id=lmht001" class="btn-detail">Chi tiết</a>
+                </div>
+
+                <div class="product-card" data-game="GenshinImpact" data-price="2000000">
+                    <img src="https://via.placeholder.com/300x200?text=Acc+Genshin" alt="Acc Genshin Impact">
+                    <h3>Acc Genshin Impact Full Waifu</h3>
+                    <p class="game-name">Genshin Impact</p>
+                    <div class="price">2.000.000 VNĐ</div>
+                    <button class="btn-add-to-cart" data-id="genshin002" data-name="Acc Genshin Impact Full Char" data-price="2000000">Thêm vào giỏ</button>
+                    <a href="product-detail.html?id=genshin002" class="btn-detail">Chi tiết</a>
+                </div>
+
+                <div class="product-card" data-game="Valorant" data-price="3000000">
+                    <img src="https://via.placeholder.com/300x200?text=Acc+Valorant" alt="Acc Valorant">
+                    <h3>Acc Valorant Rank Radiant</h3>
+                    <p class="game-name">Valorant</p>
+                    <div class="price">3.000.000 VNĐ</div>
+                    <button class="btn-add-to-cart" data-id="valo003" data-name="Acc Valorant Rank Radiant" data-price="3000000">Thêm vào giỏ</button>
+                    <a href="product-detail.html?id=valo003" class="btn-detail">Chi tiết</a>
+                </div>
+
+                <div class="product-card" data-game="TocChien" data-price="1200000">
+                    <img src="https://via.placeholder.com/300x200?text=Acc+Toc+Chien" alt="Acc Tốc Chiến">
+                    <h3>Acc Tốc Chiến Rank Thách Đấu</h3>
+                    <p class="game-name">Tốc Chiến</p>
+                    <div class="price">1.200.000 VNĐ</div>
+                    <button class="btn-add-to-cart" data-id="tc004" data-name="Acc Tốc Chiến Rank Thách Đấu" data-price="1200000">Thêm vào giỏ</button>
+                    <a href="product-detail.html?id=tc004" class="btn-detail">Chi tiết</a>
+                </div>
+
+            </div>
+            <div class="pagination">
+                <a href="#">&laquo;</a>
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">&raquo;</a>
+            </div>
+        </div> </section>
+
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Giỏ Hàng Của Bạn</h2>
+            <div id="cart-items">
+                <p>Giỏ hàng trống.</p>
+            </div>
+            <div class="cart-summary">
+                <p>Tổng cộng: <span id="cart-total">0 VNĐ</span></p>
+                <button class="btn-primary">Tiến hành thanh toán</button>
+            </div>
+        </div>
+    </div>
+
+
+    <section id="about" class="container">
+        <h2>Về Chúng Tôi</h2>
+        <p>Chúng tôi là một đội ngũ những người đam mê game, chuyên cung cấp các tài khoản game chất lượng cao, uy tín và an toàn. Với nhiều năm kinh nghiệm trong ngành, chúng tôi cam kết mang đến cho khách hàng những trải nghiệm mua sắm tốt nhất.</p>
+        <p>Mọi tài khoản đều được kiểm tra kỹ lưỡng trước khi đến tay khách hàng, đảm bảo không có vấn đề gì về bảo mật hay tranh chấp.</p>
+    </section>
+
+    <section id="contact" class="container">
+        <h2>Liên Hệ</h2>
+        <p>Nếu bạn có bất kỳ câu hỏi hoặc cần hỗ trợ, đừng ngần ngại liên hệ với chúng tôi qua các kênh sau:</p>
+        <ul>
+            <li>Email: <a href="mailto:qdungrok@gmail.comcom">qdungrok@gmail.comcom</a></li>
+            <li>Hotline: <a href="tel:00332046503">0332046503</a></li>
+            <li>Địa chỉ: 250/12 Khương Trung, Thanh Xuân, Hà NộiNội</li>
+        </ul>
+        <form class="contact-form">
+            <h3>Gửi lời nhắn cho chúng tôi</h3>
+            <input type="text" placeholder="Tên của bạn" required>
+            <input type="email" placeholder="Email của bạn" required>
+            <textarea placeholder="Nội dung tin nhắn" rows="5" required></textarea>
+            <button type="submit" class="btn-primary">Gửi</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 qd88store.id.vn. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
